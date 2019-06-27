@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <table>
+      <caption> A Table of Ice Cream Data </caption>
+      <tr>
+        <th> </th>
+        <th> First Score </th>
+        <th> Second Score </th>
+        <th> Third Score </th>
+        <th> Fourth Score </th>
+        <th> Fifth Score </th>
+      </tr>
+      <tbody>
+        <tr class="color1">
+          <th class="first-col"> Chocolate </th>
+          <td> 5 </td>
+          <td> 4 </td>
+          <td> 5 </td>
+          <td> 2 </td>
+          <td> 3 </td>
+        </tr>
+        <tr class="color2">
+          <th class="first-col"> Vanilla </th>
+          <td> 3 </td>
+          <td> -1 </td>
+          <td> 2 </td>
+          <td> 0 </td>
+          <td> 1 </td>
+        </tr>
+        <tr class="color1">
+          <th class="first-col"> Cookie Dough </th>
+          <td> 6 </td>
+          <td> 3 </td>
+          <td> 2 </td>
+          <td> 4 </td>
+          <td> 7 </td>
+        </tr>
+        <tr class="color2">
+          <th class="first-col"> Melted </th>
+          <td> 1 </td>
+          <td> 2 </td>
+          <td> 3 </td>
+          <td> 4 </td>
+          <td> 5 </td>
+        </tr>
+        <tr class="color1">
+          <th class="first-col"> Caramel </th>
+          <td> 5 </td>
+          <td> 4 </td>
+          <td> 3 </td>
+          <td> 2 </td>
+          <td> 1 </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2"> People Like Summaries </th>
+          <th colspan="4"> Note the scores </th>
+        </tr>
+      </tfoot>
+    </table>
+    <br>
+
+    <p>
+      A list of conclusions from the data
+    </p>
+    <ul>
+      <li> Conclusion: Everyone likes ice cream </li>
+      <li> Conclusion: Everything is awesome </li>
+      <li> Conclusion: Good data </li>
+    </ul>
+
+    <div class="outer-content">
+      <div class="inner-content">
+        <p>
+          Content is in here
+        </p>
+      </div>
+    </div>
+    <div>
+      <form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
+        <fieldset>
+          <legend>
+            Form using POST
+          </legend>
+          <fieldset>
+            <label for="text1">Text Input</label>
+            <input id="text1" type="text" name="text_input">
+          </fieldset>
+          <fieldset>
+            <label for="number1">Numerical Input</label>
+            <input id="number1" type="number" name="numerical_input">
+          </fieldset>
+          <fieldset>
+            <label for="password1">Password Input</label>
+            <input id="password1" type="password" name="password_input">
+          </fieldset>
+          <fieldset>
+            <label>Select the type of candy:</label><br>
+            <input type="radio" id="snickers1" name="candy" value="Snickers">
+            <label for="snickers1">Snickers</label><br>
+            <input type="radio" id="skittles1" name="candy" value="Skittles">
+            <label for="skittles1">Skittles</label><br>
+            <input type="radio" id="mentos1" name="candy" value="Mentos">
+            <label for="mentos1">Mentos</label><br>
+            <input type="submit" value="Submit">
+          </fieldset>
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="get">
+        <fieldset>
+          <legend>
+            Form using GET
+          </legend>
+          <fieldset>
+            <label for="text2">Text Input</label>
+            <input id="text2" type="text" name="text_input">
+          </fieldset>
+          <fieldset>
+            <label for="number2">Numerical Input</label>
+            <input id="number2" type="number" name="numerical_input">
+          </fieldset>
+          <fieldset>
+            <label for="password2">Password Input</label>
+            <input id="password2" type="password" name="password_input">
+          </fieldset>
+          <fieldset>
+            <label>Select the type of candy:</label><br>
+            <input type="radio" id="snickers2" name="candy" value="Snickers">
+            <label for="snickers2">Snickers</label><br>
+            <input type="radio" id="skittles2" name="candy" value="Skittles">
+            <label for="skittles2">Skittles</label><br>
+            <input type="radio" id="mentos2" name="candy" value="Mentos">
+            <label for="mentos2">Mentos</label><br>
+            <input type="submit" value="Submit">
+          </fieldset>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+
+</html>
