@@ -1,0 +1,84 @@
+//Deep comparison of objects
+// Check to see if the objects are the same
+//Iterate through properties to see if they are the same
+
+function deepEqual(a, b) {
+
+// Same property
+	if (a === b) {
+    return true;
+  } 
+
+	else if ( a === null || b === null) {
+  	return false;
+  }
+
+	else if (typeof a !== "object" || typeof b !== "object")
+  {
+  	return false;
+  }
+
+  //  Not same identity, so see if the same contents
+  else {
+	
+  	// Check that the number of keys are the same	
+		if (Object.keys(a).length != Object.keys(b).length) {
+      return false;
+    }
+
+    // Iterate through properties comparing the two objects 	
+ 		for (var prop in a) {
+    
+    	// Check to see if the key exists in both objects
+      if (b.hasOwnProperty(prop) == false) {
+      	return false;
+      }
+      
+    	// Recursively call deepEqual to compare properties
+      if (deepEqual(a[prop], b[prop]) === false) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+// Test 1; Two numbers; True
+let x = 2;
+let y = 2;
+document.write("Test 1: Compare 2 to 2: " + deepEqual(x, y) + "<br>");
+
+// Test 2; Two strings; False
+x = "a";
+y = "b";
+document.write("Test 2: Compare a to b: " + deepEqual(x, y) + "<br>");
+
+// Test 3; null; false
+x = null;
+y = {prop: "a"};
+document.write("Test 3: Compare null: " + deepEqual(x, y) + "<br>");
+
+// Test 4; Two objects; True
+x = {prop1: 1};
+y = {prop1: 1};
+document.write("Test 4: Compare prop1: " + deepEqual(x, y) + "<br>");
+
+// Test 5; Two objects; False
+x = {prop1: 1, prop2: 3};
+y = {prop1: 1, prop2: 4};
+document.write("Test 5: Compare two props: " + deepEqual(x, y) + "<br>");
+
+// Test 6; Two objects; embeded; true
+x = {prop1: 1, prop2: {prop3: "a", prop4:"b"}};
+y = {prop1: 1, prop2: {prop3: "a", prop4:"b"}};
+document.write("Test 6: Compare Embedded: " + deepEqual(x, y) + "<br>");
+
+// Test 7; Two objects; embeded; false
+x = {prop1: 1, prop2: {prop3: "a", prop4:"b"}};
+y = {prop1: 1, prop2: {prop3: "a", prop4:"c"}};
+document.write("Test 7: Compare Embedded: " + deepEqual(x, y) + "<br>");
+
+// Test 8; Two objects; ordered; true
+x = {prop1: 1, prop2: {prop3: "a", prop4:"b"}};
+y = {prop2: {prop3: "a", prop4:"b"}, prop1: 1};
+document.write("Test 8: Compare ordered: " + deepEqual(x, y) + "<br>");
